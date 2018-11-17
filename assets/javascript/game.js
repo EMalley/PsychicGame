@@ -21,15 +21,18 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
 
     if (userGuess === chosenLetter) {
-        ("wins: ") + wins++;
-    }
-    else {("losses: ") + $guessesLeft-- }
-
+        wins++;
+    };
+    if (userGuess != chosenLetter) {
+        guessesLeft--
+    };
     if (guessesLeft === 0) {
-        ("guessesLeft: ") + $losses++
+        losses++
     }
-    // logs information from game to DOM
-    $wins.innerHTML = wins;
-    $losses.innerHTML = losses;
-    $incorrectGuesses.innerHTML = lettersGuessed
+
+
+// logs information from game to DOM
+$wins.textContent = wins;
+$losses.textContent = losses;
+$incorrectGuesses.textContent = lettersGuessed
 }
