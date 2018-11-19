@@ -11,9 +11,16 @@ var $losses = document.getElementById("losses")
 var $guessesLeft = document.getElementById("guessesLeft")
 var $incorrectLetters = document.getElementById("incorrectLetters")
 
+
 // randomly Chooses a letter from the Array
 chosenLetter = letters[Math.floor(Math.random() * letters.length)];
 console.log(chosenLetter)
+
+function newGame() {
+    guessesLeft = 10;
+    chosenLetter = letters[Math.floor(Math.random() * letters.length)];
+    console.log(chosenLetter)
+}
 
 
 document.onkeyup = function (event) {
@@ -21,8 +28,7 @@ document.onkeyup = function (event) {
   
 
     if (userGuess === chosenLetter) {
-        wins++;
-        guessesLeft = 10
+        wins++ 
         lettersGuessed = []
        
     };
@@ -44,5 +50,6 @@ $wins.textContent = wins;
 $losses.textContent = losses;
 $incorrectLetters.textContent = lettersGuessed;
 $guessesLeft.textContent = guessesLeft;
+
 }
 
