@@ -1,0 +1,22 @@
+body {
+    background-color: #bc004c;
+    color: #ffffff
+}
+
+h1 {
+    font-family: 'Niconne', cursive;
+    font-size: 100px
+}
+
+
+.main {
+    text-align: center;
+    letter-spacing: 2px;
+    
+
+}
+
+p {
+    letter-spacing: 2px;
+    
+}
